@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Membership</title>
+        <link rel="shortcut icon" href="css/img/logo.jpg" type="image/x-icon">
+        <link rel ="stylesheet" type ="text/css" href="css/stylee.css">
+        <link rel ="stylesheet" type ="text/css" href ="css/headerstyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- ***********************************HEADER************************************** -->
+        <div class="header">
+            <img class="logo" src="css/img/logo.jpg" alt="CUC-LOGO">
+            <a href="file:///C:/Users/nagth/Desktop/Project/index/index.html" class="heading" ><strong>Computer Users' Club</strong></a>  
+            <div class="header-right">
+                <a  href="file:///C:/Users/nagth/Desktop/Project/index/index.html"> Home</a>
+                <a href="file:///C:/Users/nagth/Desktop/Project/Events/events.html">Events</a>
+                <div class="dropdown">
+                    <button class="dropbtn">About</button>
+                    <div class="dropdown-content">
+                      <a href="file:///C:/Users/nagth/Desktop/Project/aboutus/about%20us.html">About Us</a>
+                      <a href="file:///C:/Users/nagth/Desktop/Project/council/council.html">Council</a>
+                    </div>
+                  </div>
+               
+                  <!-- <div class="dropdown">
+                    <button class="dropbtn">Events</button>
+                    <div class="dropdown-content">
+                      <a href="#">Upcoming Events</a>
+                      <a href="#">Past Events</a>
+                      <a href="#">Gallery</a>
+                    </div>
+                  </div> -->
+
+                <a href="file:///C:/Users/nagth/Desktop/Project/contactus/contact.html">Contact Us</a>
+                <!-- <button onclick="location.href='file:///C:/Users/nagth/Desktop/Project/membership/membership.html'" class="button" style="vertical-align:middle"><span>Membership</span></button>
+                <button onclick="location.href='file:///C:/Users/nagth/Desktop/Project/Log-in/log-in.html'" class="button" style="vertical-align:middle"><span>Login</span></button> -->
+            </div>
+
+        </div> 
+        
+    
+
+
+
+
+
+
+
+        <!-- ***************************************************************************** -->
+        <h1>Become a Member!!</h1>
+
+        <div class="registration">
+            <form id="registration" method="Post" action="#" onsubmit="return validation()">
+
+                All fields are compulsory.<br><br>
+                <!----- First Name ----->
+                <label>Full Name :</label>
+                <input type="text" name="fname" id="fname"><br><br>
+
+                <!----- Mobile Number ----->
+                <label>Mobile Number :</label>
+                <input type="text" name="no1" id="no1" maxlength="10"><br><br>
+
+                <!----- Email ----->
+                <label>Email :</label>
+                <input type="email" name="email" id="email"><br><br>
+
+                <!----- Class ----->
+                <label>Class :</label>
+                <select name="clas" id="clas">
+                <option value="">None</option>
+                <option value="1">SY-CSE-1</option>
+                <option value="2">SY-CSE-2</option>
+                <option value="3">TY-CSE-1</option>
+                <option value="4">TY-CSE-2</option>
+                <option value="5">B.Tech-CSE-1</option>
+                <option value="6">B.Tech-CSE-2</option>
+                </select><br><br>
+
+
+                <!----- Date Of Birth ----->
+                <label>Date Of Birth :</label>
+                <input type="date"  name="date" id="dob" value=""><br><br>
+
+                <button type="submit" id="sub">Register</button>
+                <button  type="reset" id="sub">Reset</button>
+            </form>
+        </div>
+        <p style="text-align:center;">
+            Copyright &copy; 2020 by CUC. All rights reserved.
+        </p>
+            <script type="text/javascript">
+                function validation()
+                {
+                    var fname =document.getElementById('fname').value;
+                    var mno = document.getElementById('no1').value;
+                    var email = document.getElementById('email').value;
+                    var clas = document.getElementById('clas').value;
+                    var dob =document.getElementById('dob').value;
+                    
+                    
+                    if(fname=="")
+                    {
+                        alert('Enter full name');
+                            return false;
+                    }
+                    if(fname.search(/[0-9]/)!=-1)
+                    {
+                        alert('Full name should not contain any number');
+                        return false;
+                    }
+                    if(fname.search(/[!\@\#\$\%\^\&\+\-\_\,\.\;\:\^\*]/)!=-1)
+                    {
+                        alert('Full name should not contain special character');
+                        return false;
+                    }
+
+                    
+                    
+                    if(mno=="")
+                    {
+                        alert('Enter mobile number');
+                        return false;
+                    }
+                    if(mno.search(/[A-Z]/)!=-1)
+                    {
+                        alert('Mobile number must contain only number');
+                        return false;
+                    }
+                    if(mno.search(/[a-z]/)!=-1)
+                    {
+                        alert('Mobile number must contain only number');
+                        return false;
+                    }
+                    if(mno.search(/[!\@\#\$\%\^\&\+\-\_\,\.\;\:\^\*]/)!=-1)
+                    {
+                        alert('Mobile number should not contain special character');
+                        return false;
+                    }
+
+
+                    if(email=='')
+                    {
+                        alert('Enter Email-id')
+                        return false;
+                    }
+                    if(clas=="")
+                    {
+                        alert('Select Class');
+                        return false;
+                    }
+
+
+                    if(dob=="")
+                    {
+                        alert('Enter date of birth');
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            </script>
+
+    </body>
+    
+</html>
+    
